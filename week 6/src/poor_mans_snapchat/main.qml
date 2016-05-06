@@ -106,10 +106,10 @@ ApplicationWindow {
             {
                 id: ma_mousearea_pen
                 anchors.fill: parent
-                enabled: false
 
                 onPressed:
                 {
+                    canvas_canvas.visible = true
                     img_pen.opacity = 0.2
                 }
 
@@ -126,7 +126,7 @@ ApplicationWindow {
         {
             id: canvas_canvas
             anchors.fill: parent
-
+            visible: false
             z: 3
 
             onPaint:
