@@ -14,7 +14,7 @@ PizzaProvider::PizzaProvider(QObject *parent) : QObject(parent)
 
     // load Anchovies
     image_to_load = new QImage(95,95, QImage::Format_RGB32);
-    image_to_load->load(":/images/Anchoives.png");
+    image_to_load->load(":/images/Anchovies.png");
     m_loadedImages.insert("fish",image_to_load);
 
     // load Tomatoes
@@ -27,7 +27,10 @@ PizzaProvider::PizzaProvider(QObject *parent) : QObject(parent)
     image_to_load->load(":/images/Pineapple.png");
     m_loadedImages.insert("pineapple",image_to_load);
 
-    // Load your new topping imagine like above
+    // load Olives
+    image_to_load = new QImage(95,95, QImage::Format_RGB32);
+    image_to_load->load(":/images/Olives.png");
+    m_loadedImages.insert("olives",image_to_load);
 }
 
 QQuickImageResponse * PizzaProvider::requestImageResponse(const QString &id, const QSize &requestedSize)

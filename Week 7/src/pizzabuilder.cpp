@@ -12,11 +12,9 @@ PizzaBuilder::PizzaBuilder(PizzaProvider *provider, QObject *parent) : QObject(p
 void PizzaBuilder::chooseTopping(QString topping)
 {
     mPizzaProvider->addTopping(topping);
-    cout << "choose topping" << endl;
 }
 
 void  PizzaBuilder::removeTopping(QString topping)
 {
     mPizzaProvider->removeTopping(topping);
-    cout << "remove topping" << endl;
 }

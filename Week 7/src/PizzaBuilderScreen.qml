@@ -37,7 +37,10 @@ Rectangle {
     Connections{
         target:pizzaBuilder
         onUpdateLivePizza:{
-            livePizzaImage.source = "images/Tomatoes.png"
+            livePizzaImage.source = ""
+            livePizzaImage.opacity = .3
+            livePizzaImage.source = "image://live/pizza"
+            livePizzaImage.opacity = 1
         }
     }
 
@@ -51,10 +54,11 @@ Rectangle {
         radius:4
         titleText:"Available Toppings"
         Component.onCompleted: {
+            listData.append({"name":"Pepperoni"})
             listData.append({"name":"Anchovies"})
             listData.append({"name":"Tomatoes"})
             listData.append({"name":"Pineapple"})
-            listData.append({"name":"You Choice"})
+            listData.append({"name":"Olives"})
         }
         onClickedItem: {
             console.log("Clicked ", listData.get(index).name);
@@ -79,10 +83,6 @@ Rectangle {
             availableContainer.listData.append({"name":listData.get(index).name})
             pizzaBuilder.removeTopping(listData.get(index).name)
             listData.remove(index)
-        }
-
-        Component.onCompleted: {
-            listData.append({"name":"Pepperoni"})
         }
     }
     Component.onCompleted: {

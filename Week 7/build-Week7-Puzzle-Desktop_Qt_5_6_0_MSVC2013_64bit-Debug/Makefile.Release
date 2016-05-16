@@ -173,6 +173,7 @@ release\qrc_qml.cpp: ..\src\qml.qrc \
 	C:\Qt\5.6\msvc2013_64\bin\rcc.exe -name qml ..\src\qml.qrc -o release\qrc_qml.cpp
 
 release\qrc_images.cpp: ..\src\images.qrc \
+		..\src\images\Olives.png \
 		..\src\images\Tomatoes.png \
 		..\src\images\Pepperoni.png \
 		..\src\images\Pizza.png \
